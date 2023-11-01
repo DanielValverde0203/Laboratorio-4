@@ -27,7 +27,7 @@ void insert(int data, struct Node** head) {
 }
 
 // Funcion para agregar un nodo al final de la lista 
-void append(int data, struct Node** head) {
+void InsertEnd(int data, struct Node** head) {
     struct Node* new_node = (struct Node*)malloc(sizeof(struct Node));
     new_node->data = data;
     new_node->next = NULL;
@@ -107,8 +107,8 @@ int main() {
     struct Node* head = NULL;
 
     insert(10, &head);
-    append(20, &head);
-    append(30, &head);
+    InsertEnd(20, &head);
+    InsertEnd(30, &head);
 
     printf("Lista: ");
     printList(head);
